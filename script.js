@@ -333,10 +333,10 @@ const PALETTE_COUNT = 4;
 /* Tiny love phrases (editable) */
 const tinyPhrases = [
   "Te amo, lo hiciste bien 💚",
-  "Amorcito, buen esfuerzo 😊",
-  "Shh... te apoyo siempre ❤️",
-  "Pequeño empujón: repasá la parte de no funcionales 😉",
-  "Sos re capas — sigue así 💫"
+  "Amorcito, buen esfuerzo c:",
+  "no te pongas triste, te apoyo siempre ❤️",
+  "A repasar, mi bonito",
+  "Sos re capaz — sigue así 💫"
 ];
 
 /* -------------------------
