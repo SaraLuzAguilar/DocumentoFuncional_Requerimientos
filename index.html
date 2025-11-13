@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Estudio: Requerimientos y Documento Funcional — App</title>
+
+  <!-- Fuente opcional (requiere internet, pero no es obligatoria) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>Requerimientos & Documento Funcional</h1>
+        <p class="subtitle">Estudia rápido — modo oscuro agradable</p>
+      </div>
+
+      <nav class="tabs" role="tablist">
+        <button id="tab-theory" class="tab active" aria-pressed="true">Teoría</button>
+        <button id="tab-quiz" class="tab" aria-pressed="false">Quiz</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <!-- THEORY VIEW -->
+      <section id="view-theory" class="view" role="region" aria-label="Teoría">
+        <div class="controls-row">
+          <button id="toggle-summary" class="btn gradient">Modo resumen</button>
+          <label class="small toggle">
+            <input type="checkbox" id="pref-compact" />
+            Compacto
+          </label>
+        </div>
+
+        <div class="theory-container">
+          <!-- Card: Requerimientos -->
+          <article class="card card-themed card-blue">
+            <div class="card-accent" aria-hidden="true"></div>
+            <h2 class="card-title">REQUERIMIENTOS</h2>
+            <p class="lead">Los <strong>requerimientos</strong> son lo que <em>el sistema debe cumplir</em> para lograr su objetivo. Son la base que transforma una idea o necesidad en un prototipo funcional. En un inicio, el cliente expresa sus necesidades en lenguaje informal. Luego se traducen a un documento formal, claro y técnico, entendible por todos. <span class="highlight">Pensalo como el contrato entre el cliente y el equipo.</span></p>
+            <li> -> En un inicio, el cliente expresa sus necesidades en lenguaje informal.</li>
+            <li> -> Luego, se traduce a un documento formal, claro y técnico, entendible por todos.</li>
+
+            <h3 class="accent">Tipos generales</h3>
+            <ul class="theory-list">
+              <li><strong>Requisitos mínimos o imprescindibles:</strong> sin ellos, el sistema no sirve. Obligatorios. </li>
+              <li><strong>Requisitos deseables:</strong> no obligatorios, pero mejoran el desempeño, el rendimiento y la experiencia.</li>
+            </ul>
+
+            <h3 class="accent">Clasificación de requerimientos</h3>
+            <h4 class="sec-title">Requerimientos de Usuario</h4>
+            <p class="muted">Expresan lo que el cliente quiere en su lenguaje. Puede incluir restricciones, pero sin entrar en detalles técnicos.</p>
+
+            <h4 class="sec-title">Requerimientos de Software</h4>
+            <p class="muted">Describen con detalle qué funciones, servicios y limitaciones tendrá el sistema. Deben ser precisos y sin ambigüedades.</p>
+
+            <h3 class="accent">Funcionales vs No funcionales</h3>
+            <p class="muted"><strong>Funcionales:</strong> funciones del sistema (entradas, salidas, procesos). <strong>No funcionales:</strong> atributos de calidad (rendimiento, seguridad, usabilidad, etc.).</p>
+           
+            <h3 class="accent">Requerimientos no Funcionales de Producto</h3>
+            C.E.P.R.U.S.
+            <p class="muted">comportamiento del sistema</p>
+            <div class="mini-grid">
+              <div class="mini card-mini">
+                 <h5>Confiabilidad y Disponibilidad</h5>
+                 <p class="muted">Funcionamiento estable en su entorno.</p>
+              </div>
+              <div class="mini card-mini">
+                <h5>Escalabilidad</h5>
+                <p class="muted">Aumentar carga sin perder calidad.</p>
+              </div>
+              <div class="mini card-mini">
+                <h5>Performance(Rendimiento)"</h5>
+                <p class="muted" ></p>Tiempos de respuesta y procesamiento.</p>
+              </div>
+              <div class="mini card-mini">
+                <h5>Robustez</h5>
+                <p class="muted">Facilidad de aprendizaje y uso.</p>
+              </div>
+              <div class="mini card-mini">
+                <h5>Usabilidad</h5>
+                <p class="muted">Facilidad de aprendizaje y uso.</p>
+              </div>
+                
+              <div class="mini card-mini">
+                <h5>Seguridad</h5>
+                <p class="muted">Tiempos de respuesta y procesamiento.</p>
+              </div>
+            </div>
+        
+            <p class="example">Ejemplo: “El sistema responderá en menos de 2 segundos con hasta 100 usuarios simultáneos.” — requisito verificable.</p>
+            <p class="tip">Consejo: Los no-funcionales deben ser cuantitativos siempre que sea posible.</p>
+          
+            <h3 class="accent">Requerimientos funcionales Organizacionales: </h3>
+            E.E.O.I.
+           <p class="muted">Políticas o normas de la empresa</p>
+            <div class="mini-grid">
+              <div class="mini card-mini">
+                 <h5>De Entrega</h5>
+              </div>
+              <div class="mini card-mini">
+                <h5>De Estándares</h5>
+              </div>
+              <div class="mini card-mini">
+                <h5>Organizacionales</h5>
+              </div>
+              <div class="mini card-mini">
+                <h5>Implementación</h5>
+              </div>
+            </div>
+            
+            <h3 class="accent">Requerimientos funcionales Externos: </h3>
+            E.L.I:ps...e
+           <p class="muted">Políticas o normas de la empresa</p>
+            <div class="mini-grid">
+              <div class="mini card-mini">
+                 <h5>Éticos</h5>
+              </div>
+              <div class="mini card-mini">
+                <h5>Interoperatividad</h5>
+              </div>
+              <div class="mini card-mini">
+                <h5>Legislativos</h5>
+                <p class="muted">De Privacidad - De Seguridad</p>
+            </div>
+        </article>
+
+
+
+
+           
+
+
+          
+
+          <!-- Card: Documento Funcional -->
+          <article class="card card-themed card-violet">
+            <div class="card-accent" aria-hidden="true"></div>
+            <h2 class="card-title">DOCUMENTO FUNCIONAL</h2>
+            <p class="lead">Es la declaración oficial de lo que deben implementar los desarrolladores. Incluye requerimientos de usuario y especificaciones técnicas claras.</p>
+
+            <h3 class="accent">Objetivos</h3>
+            <ul class="theory-list">
+              <li>Ser el acuerdo formal entre cliente y desarrolladores.</li>
+              <li>Definir qué hará el sistema y bajo qué condiciones.</li>
+            </ul>
+
+            <h3 class="accent">Para qué sirve</h3>
+            <ul class="theory-list">
+              <li>Comunica los requerimientos y objetivos.</li>
+              <li>Actúa como documento legal interno.</li>
+              <li>Base para estimación, planificación y control de cambios.</li>
+            </ul>
+
+            <h3 class="accent">Posibles Lectores</h3>
+            <ul class="theory-list">
+              <li><strong>Clientes y Usuarios:</strong> validan objetivos y funcionalidad de alto nivel.</li>
+              <li><strong>Analistas:</strong> definen especificaciones para sistemas que interactúan.</li>
+              <li><strong>Desarrolladores:</strong> implementan los requerimientos.</li>
+              <li><strong>Testers:</strong> verifican que el sistema cumpla lo especificado.</li>
+              <li><strong>Soporte:</strong> plan de capacitación y manuales.</li>
+            </ul>
+
+            <h3 class="accent">Estructura del Documento de Requerimientos</h3>
+            <p class="muted">Se organiza en <strong>Introducción</strong>, <strong>Descripción general</strong> y <strong>Requerimientos</strong>. Cada sección con subpuntos claros.</p>
+
+            <div class="accordion">
+              <button class="acc-btn">1. Introducción ▾</button>
+              <div class="acc-panel">
+                <ol>
+                  <li><strong> Propósito:</strong> ¿Para qué sirve el documento y quién lo usará?</li>
+                  <li><strong> Alcance:</strong> Qué hace y qué no hace el producto (límites).</li>
+                  <li><strong> Definiciones, siglas y abreviaturas:</strong> Glosario para evitar confusiones.</li>
+                  <li><strong> Referencias:</strong> Documentos consultados (normas, propuestas).</li>
+                  <li><strong> Visión general:</strong> Qué contiene el resto del documento.</li>
+                </ol>
+              </div>
+
+              <button class="acc-btn">2. Descripción general ▾</button>
+              <div class="acc-panel">
+                <ol>
+                  <li><strong> Perspectiva del producto:</strong> Cómo encaja con otros sistemas y sus interfaces.</li>
+                  <li><strong> Funciones del producto:</strong> Resumen de funciones principales.</li>
+                  <li><strong> Características de los usuarios:</strong> Perfil y nivel técnico.</li>
+                  <li><strong> Restricciones generales:</strong> Limitaciones (herramientas, hardware, protocolos).</li>
+                  <li><strong> Supuestos y dependencias:</strong> Factores externos que pueden afectar los requerimientos.</li>
+                </ol>
+              </div>
+
+              <button class="acc-btn">3. Requerimientos ▾</button>
+              <div class="acc-panel">
+                <ol>
+                  <li><strong> Requerimientos específicos:</strong> Detalle funcional suficiente para diseñar y verificar.</li>
+                  <li><strong> Requerimientos suplementarios:</strong> Performance, mantenibilidad, usabilidad, fiabilidad, soporte, estándares.</li>
+                </ol>
+                <p class="muted">Cada requerimiento debe estar identificado de forma única.</p>
+              </div>
+            </div>
+
+            <p class="analogy">Analogía: El proyecto es una casa: los requerimientos son la lista de necesidades; el documento funcional es el plano.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- QUIZ VIEW -->
+      <section id="view-quiz" class="view hidden" role="region" aria-label="Quiz">
+        <!-- Pre-quiz selection -->
+        <div id="quiz-setup" class="card card-themed card-setup">
+          <div class="card-accent" aria-hidden="true"></div>
+          <h2 class="card-title">Antes de empezar...</h2>
+          <p class="muted">Elegí cuántas preguntas querés responder. Las preguntas salen en orden aleatorio y cada una tiene temporizador.</p>
+
+          <div class="setup-actions">
+            <button class="btn large btn-choose" data-count="25">25 preguntas</button>
+            <button class="btn large gradient btn-choose" data-count="50">50 preguntas</button>
+          </div>
+
+          <p class="tiny muted">Consejo: 25 para repaso rápido, 50 para examen completo.</p>
+        </div>
+
+        <div id="quiz-ui" class="hidden" aria-hidden="true">
+          <div class="quiz-top">
+            <div class="quiz-info">
+              <div class="chip">Pregunta <span id="q-index">0</span> / <span id="q-total">50</span></div>
+              <div class="chip">Tiempo: <span id="timer">--</span>s</div>
+            </div>
+            <div class="quiz-controls">
+              <button id="btn-start" class="btn primary">Iniciar Quiz</button>
+              <button id="btn-restart" class="btn" style="display:none">Reiniciar</button>
+            </div>
+          </div>
+
+          <div id="quiz-area" class="quiz-area hidden" aria-live="polite">
+            <div id="question-card" class="card question-card palette-0">
+              <h3 id="question-text">Pregunta...</h3>
+              <div id="options" class="options-grid" role="list">
+                <!-- Option buttons -->
+              </div>
+              <div id="feedback" class="feedback" aria-live="polite"></div>
+            </div>
+
+            <div id="progress" class="progress-row">
+              <div id="progress-bar" class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+            </div>
+          </div>
+
+          <div id="result-area" class="result-area hidden card" aria-hidden="true">
+            <h2>Resultado</h2>
+            <p>Acertaste <strong id="correct-count">0</strong> de <span id="total-count">0</span> — <strong id="percent">0%</strong></p>
+            <div id="result-msg" class="result-msg"></div>
+
+            <details id="answers-details">
+              <summary>Ver preguntas y respuestas</summary>
+              <ol id="answers-list"></ol>
+            </details>
+
+            <div class="result-actions">
+              <button id="btn-download" class="btn">Descargar resultado (JSON)</button>
+              <button id="btn-back" class="btn">Volver a teoría</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tiny secret love messages area -->
+        <div id="tiny-loves" aria-hidden="true"></div>
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Diseñado para estudio rápido • Modo oscuro suave • Hecho con ♥</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

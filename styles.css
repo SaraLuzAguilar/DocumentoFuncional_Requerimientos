@@ -1,0 +1,254 @@
+:root{
+  --bg-1: #0b0f14;
+  --bg-2: #0f1320;
+  --panel: #121418;
+  --muted: #9fb0bf;
+  --text: #e6f0f5;
+  --accentA: #8b5cf6; /* violet */
+  --accentB: #5eead4; /* mint */
+  --accentC: #60a5fa; /* blue */
+  --accentD: #ff8fab; /* soft pink */
+  --card: rgba(255,255,255,0.02);
+  --glass: rgba(255,255,255,0.03);
+  --radius:16px;
+  --shadow: 0 10px 30px rgba(2,6,23,0.7);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Nunito", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color:var(--text);
+  background: linear-gradient(600deg,var(--bg-1) 0%, var(--bg-2) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:14px;
+}
+
+/* App shell */
+#app{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px;
+}
+.brand h1{
+  margin:0;
+  font-size:1.05rem;
+  letter-spacing:0.2px;
+  font-weight:700;
+  background: linear-gradient(90deg,var(--accentC),var(--accentA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle{margin:0;color:var(--muted);font-size:0.9rem}
+
+/* Tabs */
+.tabs{display:flex;gap:8px}
+.tab{
+  background:transparent;
+  border:1px solid transparent;
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+}
+.tab.active{
+  background: linear-gradient(90deg, rgba(139,92,246,0.12), rgba(96,165,250,0.06));
+  color:var(--text);
+  border-color: rgba(255,255,255,0.04);
+}
+
+/* Content */
+.content{flex:1;display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+
+/* Controls row */
+.controls-row{display:flex;gap:10px;align-items:center;justify-content:flex-end;margin-bottom:8px}
+.btn{
+  background:transparent;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,0.04);
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+}
+.btn.gradient{
+  background: linear-gradient(90deg,var(--accentA),var(--accentC));
+  color: #02121a;
+  border:none;
+  box-shadow: 0 10px 25px rgba(96,165,250,0.06);
+}
+.btn.primary{
+  background: linear-gradient(90deg,var(--accentB),var(--accentA));
+  color:#022;
+  border:none;
+  box-shadow: 0 10px 25px rgba(93,234,190,0.05);
+}
+.btn.large{padding:14px 18px;font-size:1rem;border-radius:12px}
+.btn-choose{min-width:140px}
+
+/* Cards */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow);
+  margin-bottom:12px;
+  border:1px solid rgba(255,255,255,0.03);
+  position:relative;
+  overflow:hidden;
+}
+.card-themed{padding:18px 18px 18px 20px}
+.card-accent{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-top-left-radius:var(--radius);
+  border-bottom-left-radius:var(--radius);
+  opacity:0.95;
+}
+.card-blue .card-accent{background: linear-gradient(180deg, var(--accentC), rgba(96,165,250,0.45))}
+.card-violet .card-accent{background: linear-gradient(180deg, var(--accentA), rgba(139,92,246,0.45))}
+.card-setup .card-accent{background: linear-gradient(180deg, var(--accentB), var(--accentA))}
+
+.card-title{margin:0 0 8px 0;font-size:1.05rem}
+.lead{color:var(--muted);margin-bottom:12px}
+.accent{color:var(--accentA);font-weight:700}
+.sec-title{color:var(--accentC);margin-bottom:6px}
+.muted{color:var(--muted)}
+
+/* Lists */
+.theory-list{padding-left:18px;color:var(--muted)}
+.theory-list li{margin:8px 0}
+
+/* mini grid */
+.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.card-mini{background:rgba(255,255,255,0.015);padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+
+/* Example / tip */
+.example{font-style:italic;color:var(--muted)}
+.tip{background: linear-gradient(90deg, rgba(139,92,246,0.04), rgba(96,165,250,0.03)); padding:10px;border-radius:10px;color:var(--muted)}
+
+/* Accordion */
+.accordion .acc-btn{
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:1px dashed rgba(255,255,255,0.02);
+  color:var(--accentA);
+  padding:12px;
+  border-radius:10px;
+  margin-top:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+.acc-panel{padding:12px; display:none; color:var(--muted); background:rgba(255,255,255,0.01); margin-top:6px; border-radius:8px}
+
+/* Quiz layout */
+.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.quiz-info{display:flex;gap:8px;align-items:center}
+.chip{
+  background:rgba(255,255,255,0.03);
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:800;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* Question / options */
+.quiz-area{display:flex;flex-direction:column;gap:12px}
+.question-card{padding:18px;border-radius:14px;transition:transform .18s ease, box-shadow .18s ease}
+.question-card h3{margin:0 0 12px 0;font-size:1.05rem; color:var(--text)}
+.options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.option-btn{
+  border-radius:12px;
+  padding:16px;
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  border:2px solid rgba(0,0,0,0.15);
+  cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  text-align:center;
+  user-select:none;
+  color:var(--text);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.55);
+  background: rgba(0,0,0,0.22); /* default dark background for good contrast */
+}
+.option-btn:hover{transform:translateY(-4px)}
+.option-btn.correct{outline:4px solid rgba(94,234,190,0.12); box-shadow:0 12px 30px rgba(94,234,190,0.06)}
+.option-btn.wrong{outline:4px solid rgba(255,139,171,0.08); opacity:0.95}
+
+/* Palette classes for question card (visual identity) */
+.palette-0{ background: linear-gradient(180deg, rgba(96,165,250,0.12), rgba(6,18,35,0.35)); color:var(--text); }
+.palette-1{ background: linear-gradient(180deg, rgba(139,92,246,0.10), rgba(15,8,25,0.35)); color:var(--text); }
+.palette-2{ background: linear-gradient(180deg, rgba(94,234,190,0.06), rgba(6,20,16,0.30)); color:var(--text); }
+.palette-3{ background: linear-gradient(180deg, rgba(255,139,171,0.06), rgba(25,8,12,0.32)); color:var(--text); }
+
+/* When palette applied, ensure option buttons remain readable */
+.palette-0 .option-btn{ background: rgba(4,20,36,0.65); }
+.palette-1 .option-btn{ background: rgba(20,8,36,0.65); }
+.palette-2 .option-btn{ background: rgba(6,20,16,0.65); }
+.palette-3 .option-btn{ background: rgba(30,8,16,0.65); }
+
+/* Feedback */
+.feedback{height:20px;margin-top:8px;color:var(--muted);font-size:0.92rem}
+
+/* Progress */
+.progress-row{margin-top:6px}
+.progress-bar{background: rgba(255,255,255,0.02);height:10px;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accentB),var(--accentA))}
+
+/* Results */
+.result-area{padding:18px}
+.result-msg{margin:8px 0;color:var(--muted)}
+.result-actions{display:flex;gap:8px;margin-top:12px}
+
+/* Tiny messages */
+#tiny-loves{position:fixed; right:18px; bottom:18px; pointer-events:none; opacity:0.95; z-index:1200}
+.tiny-love{
+  background: rgba(94,234,190,0.06);
+  color:var(--accentB);
+  padding:8px 12px;
+  border-radius:999px;
+  margin-top:6px;
+  font-size:0.9rem;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+
+/* Responsive */
+@media (max-width:800px){
+  .mini-grid{grid-template-columns:1fr 1fr}
+  .options-grid{grid-template-columns:1fr;gap:10px}
+  .topbar{flex-direction:column;align-items:flex-start;gap:10px}
+  .card{padding:12px}
+  .btn.large{width:48%}
+  .quiz-top{flex-direction:column; align-items:flex-start; gap:10px}
+}
+
+/* Slight animation for question card color change */
+.fade-in { animation: fadeInCard .28s ease both; }
+@keyframes fadeInCard {
+  from { transform: translateY(6px); opacity: 0.0 }
+  to { transform: translateY(0); opacity: 1 }
+}
